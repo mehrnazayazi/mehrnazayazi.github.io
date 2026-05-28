@@ -10970,3 +10970,125 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+
+/* ==========================================
+   CUSTOM DARK THEME OVERRIDES
+   ========================================== */
+
+/* 1. Global Color Palette */
+:root {
+    --bs-primary: #38bdf8; /* Soft Sky Blue Accent */
+    --bg-main: #0f172a; /* Deep Slate Background */
+    --bg-surface: #1e293b; /* Slightly lighter slate for cards */
+    --text-main: #94a3b8; /* Easy-reading gray for paragraphs */
+    --text-heading: #f8fafc; /* Crisp white for headings */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+/* 2. Elegant Typography */
+h1, h2, h3, h4, h5, h6, .subheading {
+    font-family: 'Poppins', sans-serif !important;
+    color: var(--text-heading) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+p.lead {
+    font-weight: 300; /* Makes the intro text look cleaner */
+}
+
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+/* 3. The Sidebar (Navigation) */
+#sideNav {
+    background-color: #020617 !important; /* Very dark sidebar */
+    box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+#sideNav .nav-link {
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#sideNav .nav-link:hover, #sideNav .nav-link.active {
+    color: var(--bs-primary) !important;
+    transform: translateX(5px); /* Subtle nudge effect */
+}
+
+#sideNav .navbar-brand .img-profile {
+    border: 0.4rem solid var(--bg-surface); /* Matches the dark theme */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* 4. Section Dividers */
+hr {
+    border-top-color: #334155; 
+    opacity: 1;
+}
+
+/* 5. Fancy "Floating Cards" for Content */
+/* This targets the Flexbox containers in Experience/Education/Demos */
+.resume-section-content .d-flex {
+    background-color: var(--bg-surface);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem !important;
+    border: 1px solid rgba(255,255,255,0.05); /* Very subtle border */
+}
+
+.resume-section-content .d-flex:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Fix text colors inside the cards */
+.resume-section-content .d-flex p, 
+.resume-section-content .d-flex ul {
+    color: var(--text-main);
+}
+
+/* 6. Videos and Media */
+video {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 7. Social Icons */
+.social-icons .social-icon {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-heading) !important;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease !important;
+}
+
+.social-icons .social-icon:hover {
+    background-color: var(--bs-primary) !important;
+    color: #000 !important; /* Dark icon on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}

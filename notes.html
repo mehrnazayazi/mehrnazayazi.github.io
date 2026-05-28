@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Mehrnaz Ayazi - Notes & Papers</title>
+    
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="css/styles.css" rel="stylesheet" />
+    
+    <style>
+        /* Extra styling specifically for the PDF grid */
+        .pdf-card {
+            background-color: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .pdf-icon {
+            font-size: 2.5rem;
+            color: #ef4444; /* Red color for PDF icon */
+        }
+    </style>
+</head>
+<body id="page-top" style="padding-top: 3rem;">
+
+    <div class="container">
+        <a href="index.html" class="btn btn-outline-light mb-5">
+            <i class="fas fa-arrow-left me-2"></i> Back to Portfolio
+        </a>
+
+        <h1 class="mb-2">Research <span class="text-primary">Notes</span></h1>
+        <p class="lead mb-5">A repository of my papers, derivations, and study materials.</p>
+
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <a href="assets/pdf/use_quad_f.pdf" target="_blank" class="text-decoration-none">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div>
+                            <h4 class="mb-1 text-white">Approximation of derivative of det(deformation gradient) in MPM</h4>
+                            <p class="mb-0 text-muted small">Notes on the mathematical approximation of the determinant of the deformation gradient in Material Point Method simulations.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- <div class="col-md-6">
+                <a href="assets/files/your-paper-2.pdf" target="_blank" class="text-decoration-none">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div>
+                            <h4 class="mb-1 text-white">Real-time Hair Simulation</h4>
+                            <p class="mb-0 text-muted small">Prototype documentation and implementation notes from ACM SIGGRAPH 2023.</p>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+            
+            </div>
+    </div>
+
+</body>
+</html>
