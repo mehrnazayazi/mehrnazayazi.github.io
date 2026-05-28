@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{blindtext}
+
+
+
+
+\title{Quadratic approximation of determinant of deformation gradient in MPM}
+\date{\today}
+\begin{document}
+\newcommand{\dd}{\partial}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+
+\maketitle
+We know from this  \href{https://www.cs.ucr.edu/~craigs/papers/2016-mpm-course/mpmcourse.pdf}{MPM course}\href and basically any MPM paper that:
+\[F^{n+1}_{p} = (I+\Delta t\nabla \vec{v}) F_p^{n}\]
+if we define $J^{n+1}=\det(F_p^{n+1})$ then $J^{n+1} = J^n\det(I+\Delta t\nabla \vec{v})$. \\
+\textbf{Note:} From taylor expansion we know $e^x = 1 + x + \frac{x^2}{2!}+\frac{x^3}{3!}+\cdots$\\
+Same is true for matrices, we can write $e^A = I + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots$\\
+
+So we can write $I+\Delta t\nabla \vec{v} \approx e^{\Delta t\nabla \vec{v}}$\\
+\textbf{Jacobi formula} tells us $\det(e^A) = e^{\text{tr}(A)}$, which can be further approximated using taylor approximation as $e^{\text{tr}(A)} \approx 1 + \text{tr}(A) + \frac{\text{tr}(A)^2}{2!}+\cdots$\\
+so we can write: 
+\begin{align*}
+J^{n+1} &= J^n\det(I+\Delta t\nabla \vec{v})\\
+&\approx J^n\det(e^{\Delta t\nabla \vec{v}})\\
+&= J^n e^{\text{tr}(\Delta t\nabla \vec{v})}\\
+&\approx J^n\left(1 + \text{tr}(\Delta t\nabla \vec{v}) + \frac{\text{tr}(\Delta t\nabla \vec{v})^2}{2!}\right)
+\end{align*}
+in normal circumstances, we would just use $J^{n+1} = J^n\det(I+\Delta t\nabla \vec{v})$ but this approximation can be useful when $J$ becomes inverted. \\
+
+\textcolor{red}{To be added}: I forgot the proof that shows that adding the second term for approximation can help with inverted $J$. I will add it later.\\
+
+\end{document}
