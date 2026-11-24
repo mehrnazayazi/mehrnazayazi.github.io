@@ -5,13 +5,15 @@ async function loadComponents() {
     const components = [
         { id: 'nav-placeholder', path: 'sections/nav.html' },
         { id: 'about-placeholder', path: 'sections/about.html' },
+        { id: 'publications-placeholder', path: 'sections/publications.html' },
         { id: 'demos-placeholder', path: 'sections/demos.html' },
         { id: 'experience-placeholder', path: 'sections/experience.html' },
         { id: 'education-placeholder', path: 'sections/education.html' },
         { id: 'skills-placeholder', path: 'sections/skills.html' },
         { id: 'interests-placeholder', path: 'sections/interests.html' },
         { id: 'achievements-placeholder', path: 'sections/achievements.html' },
-        { id: 'notes-placeholder', path: 'sections/notes.html' }
+        { id: 'notes-placeholder', path: 'sections/notes.html' },
+        { id: 'misc-placeholder', path: 'sections/misc.html' }
     ];
 
     // 2. Fetch all HTML files concurrently
