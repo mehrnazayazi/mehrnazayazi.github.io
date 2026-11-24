@@ -1,27 +1,40 @@
 <!-- Demos-->
 <section class="resume-section" id="demos">
     <div class="resume-section-content">
-        <h2 class="mb-5">Demos</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">Fluid Simulation Demo</h3>
-                <div class="subheading mb-3">Buoyancy driven phase separation in MPM</div>
-                <video width="100%" controls>
-                    <source src="assets/files/mps-db-3d-take4.mov" type="video/mp4">
-                    Your browser does not support the video tag.
+        <h2 class="mb-3">Demos</h2>
+        <p class="mb-5">Test simulations from my work on <a href="#publications">buoyancy-driven phase separation in the Material Point Method</a>, each shown next to standard MPM on the same setup.</p>
+
+        <h3 class="mb-0">3D Dam Break</h3>
+        <div class="subheading mb-3">Two immiscible fluids of different densities</div>
+        <div class="row g-3 mb-5">
+            <div class="col-6">
+                <video width="100%" controls muted loop playsinline preload="metadata" poster="assets/videos/dam-break-ours.jpg">
+                    <source src="assets/videos/dam-break-ours.mp4" type="video/mp4">
                 </video>
-                <p class="mt-2">3D dam break simulation of multi-phase fluids with phase separation in Material point method.</p>
+                <p class="mt-1 mb-0 text-center"><strong>Our method</strong></p>
+            </div>
+            <div class="col-6">
+                <video width="100%" controls muted loop playsinline preload="metadata" poster="assets/videos/dam-break-mpm.jpg">
+                    <source src="assets/videos/dam-break-mpm.mp4" type="video/mp4">
+                </video>
+                <p class="mt-1 mb-0 text-center">Standard MPM</p>
             </div>
         </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">Buoyancy driven phase separation in MPM</h3>
-                <div class="subheading mb-3">Multi-style Lagrangian NST</div>
-                <video width="100%" controls>
-                    <source src="assets/files/mps-rt-3d-take3-10s.mov" type="video/mp4">
-                    Your browser does not support the video tag.
+
+        <h3 class="mb-0">3D Rayleigh–Taylor Instability</h3>
+        <div class="subheading mb-3">An unstable two-fluid layering that overturns</div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-4">
+                <video width="100%" controls muted loop playsinline preload="metadata" poster="assets/videos/rayleigh-taylor-ours.jpg">
+                    <source src="assets/videos/rayleigh-taylor-ours.mp4" type="video/mp4">
                 </video>
-                <p class="mt-2">3D rayleigh-Taylor instability simulation in material point method.</p>
+                <p class="mt-1 mb-0 text-center"><strong>Our method</strong></p>
+            </div>
+            <div class="col-6 col-md-4">
+                <video width="100%" controls muted loop playsinline preload="metadata" poster="assets/videos/rayleigh-taylor-mpm.jpg">
+                    <source src="assets/videos/rayleigh-taylor-mpm.mp4" type="video/mp4">
+                </video>
+                <p class="mt-1 mb-0 text-center">Standard MPM</p>
             </div>
         </div>
     </div>
